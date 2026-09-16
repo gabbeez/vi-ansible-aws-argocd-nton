@@ -29,7 +29,6 @@ resource "aws_subnet" "gabby_custom_subnet" {
 resource "aws_instance" "gabby_server" {
   ami           = "ami-0c55b159cbfafe1f0" # Standard Ohio Ubuntu image
   instance_type = "t2.micro"
-  key_name      = "gabby-demo"
   subnet_id     = aws_subnet.gabby_custom_subnet.id # Bypasses default VPC checks!
 
   tags = {

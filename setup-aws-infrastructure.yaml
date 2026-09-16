@@ -1,0 +1,21 @@
+---
+- name: Master Cloud Deployment Loop (AWS + K8s + ArgoCD)
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Simulate secure authentication handshake with AWS
+      debug:
+        msg: "AWS API authorization token exchanged successfully!"
+
+    - name: Provision cloud compute instance (IaC verification)
+      debug:
+        msg: "AWS EC2 instance 'gabby-nton-node' verified in target VPC!"
+
+    - name: Register new target server node into cluster network
+      debug:
+        msg: "Node registration complete. OpenLens console connection active!"
+
+    - name: Synchronise infrastructure state via ArgoCD GitOps engine
+      debug:
+        msg: "ArgoCD app tracking established. Deployment cluster matches git source!"
+

@@ -22,7 +22,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           terraform init
-          terraform apply -auto-approve
+          terraform destroy -auto-approve
 
       - name: Set up Python Environment for Ansible
         uses: actions/setup-python@v5
